@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset=utf-8 />
+        <title>Rock Paper Scissors</title>
+    </head> 
+	<body>
+	<h1> Rock Paper Scissors</h1>
+	<button id="Rock" onclick="rock()","bill()">Rock</button>
+	<button id="Paper" onclick="paper()">Paper</button>
+	<button id="Scissors" onclick="scissors()">Scissors</button> 
+	<br/>
+	<form>
+	<h3> Your choice: <span id="ice"> </span></h3> <br/>
+	<h3> Computer:<span id="computer"> </span></h3> <br/>
+	<h3> Result:<span id="result"> </span></h3>
+	
+	</form>
+
+	<script>
+	const choice = ["Rock","Paper","Scissors"];
+	
+	function rock() { 
+	var rng = choice[Math.floor(Math.random() * choice.length)];
+	document.getElementById("computer").innerHTML = rng;
+	document.getElementById("ice").innerHTML = id="Rock";
+	if ( rng === "Rock") { document.getElementById("result").innerHTML = "Draw";
+	}else if ( rng === "Scissors") { document.getElementById("result").innerHTML = "A winner is you";
+	} else { document.getElementById("result").innerHTML = "you lost";
+	}
+}
+
+  function paper() {
+	var rng = choice[Math.floor(Math.random() * choice.length)];
+	document.getElementById("computer").innerHTML = rng;
+	document.getElementById("ice").innerHTML = id="Paper";
+	if ( rng === "Paper") { document.getElementById("result").innerHTML = "Draw";
+	} else if ( rng === "Rock") { document.getElementById("result").innerHTML = "A winner is you";
+	} else { document.getElementById("result").innerHTML = "you lost";
+	}
+}
+	
+  function scissors() { 
+	
+	var rng = choice[Math.floor(Math.random() * choice.length)];
+	document.getElementById("computer").innerHTML = rng;
+	document.getElementById("ice").innerHTML = id="Scissors";
+	if ( rng === "Scissors") { document.getElementById("result").innerHTML = "Draw";
+	}else if ( rng === "Paper") { document.getElementById("result").innerHTML = "A winner is you";
+	} else { document.getElementById("result").innerHTML = "you lost";
+	}
+}
+	
+
+	</script>
+	
+	
+	</body>
+</html>
